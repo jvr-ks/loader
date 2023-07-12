@@ -57,7 +57,6 @@ javasourceurl := javasourceurlDefault
 executorDefault := "echo Hello world!"
 executor := executorDefault
 consoleapp := 0
-debug := 0
 classpath := ""
 mainclass := ""
 parameter := ""
@@ -135,31 +134,13 @@ if (parameter == "")
 
 theCmd := trim(executor . A_Space . quot1 . classpath . quot1 . A_Space . mainclass . A_Space . quot2 . parameter  . quot2)
 
-if (debug){
-  tipTopTime(theCmd, 4000)
-  clipboard := theCmd
-  sleep,4000
-} else {
-  if (splash != ""){
-    ; timer will not work, because it is blocked by CmdRet()
-    tipTopLeftTime(splash, 5000)
-  }
+if (splash != ""){
+  tipTopLeftTime(splash, 5000)
 }
 
-; settimer, CmdRet, -1
-; CmdRet() deactivated, is to slow!
-
-; theCmd, result
 runwait, %comspec% /c %theCmd% | clip,,hide
 
 result := clipboard
-
-; if (debug){
-  msgbox, The parameter "debug" is deprecated`, the result is always copied to the clipboard!
-  ; clipboard := result
-  ; tipTopTime(result, 5000)
-  ; sleep, 5000
-; }
 
 if (showresult){
   tipTopTime(result, showresulttime)
@@ -167,7 +148,6 @@ if (showresult){
 }
 
 if (consoleapp){
-  ; clipboard := result
   if (0 + result == 0)
     exitcode := 0
   else
@@ -184,7 +164,7 @@ Escape::
 exit(1)
 ;-------------------------------- readParams --------------------------------
 readParams(){
-  global hasParams, disableini, consoleapp, debug, showresult
+  global hasParams, disableini, consoleapp, showresult
 
   global executor, classpath, mainclass, parameter, showresulttime, splash, checkjava, requiresadmin
   
@@ -194,9 +174,7 @@ readParams(){
     if(eq(StrLower(StrLower(A_Args[A_index])),"consoleapp")){
       consoleapp := 1
     }
-    if(eq(StrLower(StrLower(A_Args[A_index])),"debug")){
-      debug := 1
-    }
+
     if(eq(StrLower(StrLower(A_Args[A_index])),"showresult")){
       showresult := 1
     }
@@ -248,14 +226,13 @@ readIni(){
   global configFile
   
   global javasourceurlDefault, javasourceurl, executorDefault, executor
-  global consoleapp, debug, classpath, mainclass
+  global consoleapp, classpath, mainclass
   global parameter, showresult, showresulttime, checkjava
   global requiresadmin, splash
 
   IniRead, javasourceurl, %configFile%, config, javasourceurl, javasourceurlDefault
   IniRead, executor, %configFile%, config, executor, executorDefault
   IniRead, consoleapp, %configFile%, config, consoleapp, 0
-  IniRead, debug, %configFile%, config, debug, 0
   IniRead, classpath, %configFile%, config, classpath, %A_Space%
   IniRead, mainclass, %configFile%, config, mainclass, %A_Space%
   IniRead, parameter, %configFile%, config, parameter, %A_Space%
@@ -336,8 +313,7 @@ CmdRet() {
 }
 ;--------------------------------- isOkJava ---------------------------------
 isJavaOk(){
-  global theCmd, result, debug
-  
+  global theCmd, result  
   ret := false
 
   try {
@@ -346,10 +322,6 @@ isJavaOk(){
     javaFoundPos := RegExMatch(result,"O)version(.*)", mJava)
     if(javaFoundPos > 0){
       a := mJava.value(mJava.Count())
-      if (debug){
-        tiptopTime("Found Java version: " . a, 3000)
-        sleep, 3000
-      }
         
       ret := true
     }

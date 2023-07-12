@@ -35,9 +35,11 @@ Create a directory, example: "C:\jvrks\loader".
 Download Updater from Github to the previously created directory:  
 **updater.exe** 64 bit Windows use:   
 [updater.exe 64bit](https://github.com/jvr-ks/loader/raw/main/updater.exe)  
-
+or  
+[updater32.exe 32bit](https://github.com/jvr-ks/loader/raw/main/updater32.exe) 
+  
 [Updater viruscheck see Updater repository](https://github.com/jvr-ks/updater)  
-   
+  
 And optional:  
 (otherwise you must enter the appname "loader" once)  
 Right-click, save target as:  

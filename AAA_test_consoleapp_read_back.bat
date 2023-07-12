@@ -5,7 +5,7 @@
 
 @echo off
 
-@loader.exe disableini consoleapp debug --Executor="cmd /c java -version"
+@loader.exe disableini consoleapp --Executor="cmd /c java -version"
 
 rem *** read back into variable ***
 
