@@ -1,0 +1,10 @@
+[config]
+executor="cmd /c"
+classpath=""
+mainclass="echo Hello from Loader!"
+parameter=""
+javasourceurl="https://www.graalvm.org/downloads/index.html"
+showresult=1
+splash='Splash from the file "loader.ini"'
+checkjava=1
+requiresadmin=0
