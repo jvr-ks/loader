@@ -1,5 +1,5 @@
 # Loader
-Windows > 10 only!  
+Windows &gt; 10 only!  
 
 # **Usable, but still under construction! (BETA)**
 
@@ -63,13 +63,13 @@ Examples without a configuration-file (just for demonstration):
     
 #### Latest changes:  
   
-Version (>=)| Change  
+Version (&gt;=)| Change  
 ------------ | -------------  
 0.022 | Parameter "debug" removed, always using the clipboard to copy the result
-0.018 | Parameter "nojavacheck" renamed to "checkjava" manually rename \[Config-file] -> \[config] -> approbiate, app parameter is renamed to nojavacheck  
+0.018 | Parameter "nojavacheck" renamed to "checkjava" manually rename \[Config-file] -&gt; \[config] -&gt; approbiate, app parameter is renamed to nojavacheck  
 0.016 | Parameter "requiresadmin" (Config only)
 0.015 | Parameter "nojavacheck"
-0.014 | Show Loader-start message: \[Config-file] -> \[config] -> splash
+0.014 | Show Loader-start message: \[Config-file] -&gt; \[config] -&gt; splash
 0.012 | showresulttime (milliseconds) in the \[Config-file] (default = 5000)
 0.011 | Updater support removed (Loader is not directly runnable)
 0.010 | showresult as parameter or in the \[Config-file] (1 === true)
@@ -104,7 +104,7 @@ checkjava=0 | nojavacheck | Checking the Java-runtime can be disabled
 splash="message" | --splash="message" | Show Loader-start message  
 debug=1 | debug | \*4) Show debug messages, copy the result to the clipboard, 5 seconds delay befor exiting 
 --- | disableini | \[Config-file] is completely ignored  \*1)  
-consoleapp=1 | consoleapp \*3) | Return result in the clipboard, use supplied ["getfromclip.exe"](https://github.com/jvr-ks/lsimpletools) to retrieve it (example -> AAA_test_consoleapp.bat).  
+consoleapp=1 | consoleapp \*3) | Return result in the clipboard, use supplied ["getfromclip.exe"](https://github.com/jvr-ks/lsimpletools) to retrieve it (example -&gt; AAA_test_consoleapp.bat).  
 showresult=1 | showresult | Show result message (top-center of the screen)
 showresulttime=5000 | --showresulttime="5000" | Show result / debug timeout in milliseconds, default is 5000
 executor="P" | --executor="P" | the command to execute | Windows builtin commands must be called via "cmd.exe" \*3   
@@ -145,7 +145,7 @@ printDependencyClasspath := {
 
   val quot = "\""
   val cp = (Compile / dependencyClasspath).value
-  cp.foreach(f => {
+  cp.foreach(f =&gt; {
     val pn = (f.data).toString
     val fn = (pn.split("\\\\").takeRight(1))(0)
     val pnBatch = pn.replace("%","%%")
@@ -187,10 +187,10 @@ Loader has no hotkey defined.
 Old Java Swing apps fail to set the correct dpi-scaling,  
 especially if started from the command-line.  
 Let Windows (10) do the dpi-scaling:
-(Selja has a menu entry BraalVM -> Open JAVA_HOME directory)
+(Selja has a menu entry BraalVM -&gt; Open JAVA_HOME directory)
   
 - Find java.exe you installed,  
-- Right click -> Properties,  
+- Right click -&gt; Properties,  
 - Go to Compatibility tab,  
 - Check Override high DPI scaling behavior,  
 - Choose "System" for Scaling performed by.  
@@ -210,7 +210,7 @@ Copyright (c) 2022 J. v. Roos
 
 
 ##### Virusscan at Virustotal 
-[Virusscan at Virustotal, loader.exe 64bit-exe, Check here](https://www.virustotal.com/gui/url/870e7ec7052da6d6aa8e0171d6bb06bc973da3b330791b5c11e4af7e111c5021/detection/u-870e7ec7052da6d6aa8e0171d6bb06bc973da3b330791b5c11e4af7e111c5021-1697182748
+[Virusscan at Virustotal, loader.exe 64bit-exe, Check here](https://www.virustotal.com/gui/url/870e7ec7052da6d6aa8e0171d6bb06bc973da3b330791b5c11e4af7e111c5021/detection/u-870e7ec7052da6d6aa8e0171d6bb06bc973da3b330791b5c11e4af7e111c5021-1706975731
 )  
-[Virusscan at Virustotal, loader32.exe 32bit-exe, Check here](https://www.virustotal.com/gui/url/757855dbdbcda3cabe7634f97f3ba8f8e5214b0d1628186d7ec1b5a794a96946/detection/u-757855dbdbcda3cabe7634f97f3ba8f8e5214b0d1628186d7ec1b5a794a96946-1697182749
+[Virusscan at Virustotal, loader32.exe 32bit-exe, Check here](https://www.virustotal.com/gui/url/757855dbdbcda3cabe7634f97f3ba8f8e5214b0d1628186d7ec1b5a794a96946/detection/u-757855dbdbcda3cabe7634f97f3ba8f8e5214b0d1628186d7ec1b5a794a96946-1706975732
 )  
