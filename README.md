@@ -210,7 +210,7 @@ Copyright (c) 2022 J. v. Roos
 
 
 ##### Virusscan at Virustotal 
-[Virusscan at Virustotal, loader.exe 64bit-exe, Check here](https://www.virustotal.com/gui/url/870e7ec7052da6d6aa8e0171d6bb06bc973da3b330791b5c11e4af7e111c5021/detection/u-870e7ec7052da6d6aa8e0171d6bb06bc973da3b330791b5c11e4af7e111c5021-1706975731
+[Virusscan at Virustotal, loader.exe 64bit-exe, Check here](https://www.virustotal.com/gui/url/870e7ec7052da6d6aa8e0171d6bb06bc973da3b330791b5c11e4af7e111c5021/detection/u-870e7ec7052da6d6aa8e0171d6bb06bc973da3b330791b5c11e4af7e111c5021-1718100329
 )  
-[Virusscan at Virustotal, loader32.exe 32bit-exe, Check here](https://www.virustotal.com/gui/url/757855dbdbcda3cabe7634f97f3ba8f8e5214b0d1628186d7ec1b5a794a96946/detection/u-757855dbdbcda3cabe7634f97f3ba8f8e5214b0d1628186d7ec1b5a794a96946-1706975732
+[Virusscan at Virustotal, loader32.exe 32bit-exe, Check here](https://www.virustotal.com/gui/url/757855dbdbcda3cabe7634f97f3ba8f8e5214b0d1628186d7ec1b5a794a96946/detection/u-757855dbdbcda3cabe7634f97f3ba8f8e5214b0d1628186d7ec1b5a794a96946-1718100330
 )  
